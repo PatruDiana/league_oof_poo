@@ -21,4 +21,9 @@ public class Pyromancer extends Hero {
                 ", HP=" + HP +
                 '}';
     }
+
+    @Override
+    public void accept(abilities.Visitor v) {
+
+    }
 }

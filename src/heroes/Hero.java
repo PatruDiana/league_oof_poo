@@ -1,6 +1,6 @@
 package heroes;
 
-public abstract class Hero {
+public abstract class Hero implements Visitable{
     protected int row;
     protected int col;
     protected String type;
