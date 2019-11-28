@@ -26,8 +26,8 @@ public class Paralysis extends Abilities implements Visitor {
         dmg = dmg * land_bonus;
         dmg += Constants.Pyromancer_Modificator_P*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        p.setHP(result);
+//        System.out.println(result);
+        p.setHP_current(result);
         if (Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
             p.setDamage_overtime(0, nr_rounds, true);
@@ -39,20 +39,23 @@ public class Paralysis extends Abilities implements Visitor {
     @Override
     public void visit(Knight k) {
         float dmg = damage;
+        System.out.println(dmg);
         float land_bonus = land_modificator;
         if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_type;
+            land_bonus += Constants.Woods_Bonus;
+            System.out.println("intra woods");
+            System.out.println(land_bonus);
         }
         dmg = dmg * land_bonus;
         dmg -= Constants.Knight_Modificator_P*dmg;
         int result = Math.round(dmg);
         System.out.println(result);
-        k.setHP(result);
+        k.setHP_current(result);
         if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-            k.setDamage_overtime(0, nr_rounds, true);
+            k.setDamage_overtime(result, nr_rounds, true);
         } else {
-            k.setDamage_overtime(0, nr_rounds_overtime, true);
+            k.setDamage_overtime(result, nr_rounds_overtime, true);
         }
 
     }
@@ -67,8 +70,8 @@ public class Paralysis extends Abilities implements Visitor {
         dmg = dmg * land_bonus;
         dmg -= Constants.Rogue_Modificator_P*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        r.setHP(result);
+//        System.out.println(result);
+        r.setHP_current(result);
         if (Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
             r.setDamage_overtime(0, nr_rounds, true);
@@ -88,8 +91,8 @@ public class Paralysis extends Abilities implements Visitor {
         dmg = dmg * land_bonus;
         dmg += Constants.Wizard_Modificator_P*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        w.setHP(result);
+//        System.out.println(result);
+        w.setHP_current(result);
         if (Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
             w.setDamage_overtime(0, nr_rounds, true);

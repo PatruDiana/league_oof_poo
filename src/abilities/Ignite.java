@@ -10,7 +10,7 @@ public class Ignite extends Abilities implements Visitor {
     Ignite() {
         damage = Constants.Damage_Ignite;
         damage_overtime = Constants.Damage_Overtime_Ignite;
-        nr_rounds_overtime = Constants.Nr_Rounds_Overtime;
+        nr_rounds_overtime = Constants.Nr_Rounds_Overtime_I;
     }
     public void setDamage() {
         damage += Constants.Extra_Damage_Ignite;
@@ -36,8 +36,8 @@ public class Ignite extends Abilities implements Visitor {
         int result = Math.round(dmg);
         int result_overtime = Math.round(dmg_overtime);
 //        System.out.println(result);
-        p.setHP(result);
-        p.setDamage_overtime(result_overtime, nr_rounds_overtime);
+        p.setHP_current(result);
+        p.setDamage_overtime(result_overtime, nr_rounds_overtime, false);
     }
 
     @Override
@@ -54,9 +54,9 @@ public class Ignite extends Abilities implements Visitor {
         dmg_overtime += Constants.Knight_Modificator_I*dmg_overtime;
         int result = Math.round(dmg);
         int result_overtime = Math.round(dmg_overtime);
-//        System.out.println(result);
-        k.setHP(result);
-        k.setDamage_overtime(result_overtime, nr_rounds_overtime);
+//        System.out.println("Ignite: " +  result);
+        k.setHP_current(result);
+        k.setDamage_overtime(result_overtime, nr_rounds_overtime, false);
     }
 
     @Override
@@ -74,8 +74,8 @@ public class Ignite extends Abilities implements Visitor {
         int result = Math.round(dmg);
         int result_overtime = Math.round(dmg_overtime);
 //        System.out.println(result);
-        r.setHP(result);
-        r.setDamage_overtime(result_overtime, nr_rounds_overtime);
+        r.setHP_current(result);
+        r.setDamage_overtime(result_overtime, nr_rounds_overtime,false);
     }
 
     @Override
@@ -87,14 +87,15 @@ public class Ignite extends Abilities implements Visitor {
             land_bonus += Constants.Volcanic_Bonus;
         }
         dmg = dmg * land_bonus;
+        w.setDamage_rec(dmg);
         dmg_overtime = dmg_overtime*land_bonus;
         dmg += Constants.Wizard_Modificator_F*dmg;
         dmg_overtime += Constants.Wizard_Modificator_I * dmg_overtime;
         int result = Math.round(dmg);
         int result_overtime = Math.round(dmg_overtime);
 //        System.out.println(result);
-        w.setHP(result);
-        w.setDamage_overtime(result_overtime, nr_rounds_overtime);
+        w.setHP_current(result);
+        w.setDamage_overtime(result_overtime, nr_rounds_overtime,false);
     }
 
     @Override

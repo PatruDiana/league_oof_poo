@@ -29,8 +29,8 @@ public class Deflect extends Abilities implements Visitor {
         dmgpercent += dmgpercent* Constants.Pyromancer_Modificator_De;
         float dmg = dmgpercent * damage;
         int result = Math.round(dmg);
-        System.out.println(result);
-        p.setHP(result);
+//        System.out.println(result);
+        p.setHP_current(result);
     }
 
     @Override
@@ -44,8 +44,8 @@ public class Deflect extends Abilities implements Visitor {
         dmgpercent += dmgpercent * Constants.Knight_Modificator_De;
         float dmg = dmgpercent * damage;
         int result = Math.round(dmg);
-        System.out.println(result);
-        k.setHP(result);
+//        System.out.println(result);
+        k.setHP_current(result);
     }
 
     @Override
@@ -59,8 +59,8 @@ public class Deflect extends Abilities implements Visitor {
         dmgpercent += dmgpercent * Constants.Roque_Modificator_De;
         float dmg = dmgpercent * damage;
         int result = Math.round(dmg);
-        System.out.println(result);
-        r.setHP(result);
+//        System.out.println(result);
+        r.setHP_current(result);
     }
 
     @Override

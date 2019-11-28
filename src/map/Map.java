@@ -53,4 +53,7 @@ public class Map {
             System.out.println();
         }
     }
+    public int getlocation(int i, int j) {
+        return map[i][j];
+    }
 }

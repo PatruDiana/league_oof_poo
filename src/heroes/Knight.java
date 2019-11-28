@@ -1,6 +1,9 @@
 package heroes;
 
+import abilities.Visitor;
 import common.Constants;
+import abilities.AbilitiesFactory;
+
 
 public class Knight extends Hero {
     Knight(int row, int col) {
@@ -8,22 +11,15 @@ public class Knight extends Hero {
         this.col = col;
         this.HP = Constants.Hp_Knight;
         this.type = "K";
+        this.abilities = AbilitiesFactory.getAbilities(type);
+        this.freeze = false;
+        this.death = false;
+        this.HP_current = Constants.Hp_Knight;
     }
 
-    @Override
-    public String toString() {
-        return "Knight{" +
-                "row=" + row +
-                ", col=" + col +
-                ", type='" + type + '\'' +
-                ", level=" + level +
-                ", XP=" + XP +
-                ", HP=" + HP +
-                '}';
-    }
 
     @Override
-    public void accept(abilities.Visitor v) {
-
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

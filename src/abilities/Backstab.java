@@ -38,8 +38,8 @@ public class Backstab extends Abilities implements Visitor {
         dmg += Constants.Pyromancer_Modificator_B*dmg;
         dmg = woods * dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        p.setHP(result);
+//        System.out.println(result);
+        p.setHP_current(result);
     }
 
     @Override
@@ -54,15 +54,17 @@ public class Backstab extends Abilities implements Visitor {
             }
         }
         nr_rounds++;
+       // System.out.println("aici" + nr_rounds);
         if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type) {
             land_bonus += Constants.Woods_Bonus;
         }
+        System.out.println("land" + land_bonus);
         dmg = dmg * land_bonus;
         dmg -= Constants.Knight_Modificator_B*dmg;
         dmg = woods * dmg;
         int result = Math.round(dmg);
         System.out.println(result);
-        k.setHP(result);
+        k.setHP_current(result);
 
     }
 
@@ -85,8 +87,8 @@ public class Backstab extends Abilities implements Visitor {
         dmg += Constants.Roque_Modificator_B*dmg;
         dmg = woods * dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        r.setHP(result);
+//        System.out.println(result);
+        r.setHP_current(result);
 
     }
 
@@ -109,8 +111,8 @@ public class Backstab extends Abilities implements Visitor {
         dmg += Constants.Wizard_Modificator_B*dmg;
         dmg = woods * dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        w.setHP(result);
+//        System.out.println(result);
+        w.setHP_current(result);
 
     }
 }

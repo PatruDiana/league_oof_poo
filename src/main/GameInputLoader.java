@@ -50,15 +50,15 @@ public class GameInputLoader {
                 }
 //                System.out.println(line_moves);
             }
-            fs.close();
+          //  fs.close();
 
         } catch (Exception e1) {
             e1.printStackTrace();
         }
         Map map = Map.getInstance();
-        map.display();
+//        map.display();
 //        System.out.println(playersinfo.toString());
-        System.out.println(coordplayers.toString());
+//        System.out.println(coordplayers.toString());
 //        System.out.println(arraymoves.toString());
          Game game = Game.getInstance(playersinfo,coordplayers, arraymoves, nr_rounds);
     }

@@ -28,8 +28,8 @@ public class Fireblast extends Abilities implements Visitor{
         dmg = dmg * land_bonus;
         dmg -= Constants.Pyromancer_Modificator_F*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        p.setHP(result);
+//        System.out.println(result);
+        p.setHP_current(result);
     }
 
     @Override
@@ -42,8 +42,8 @@ public class Fireblast extends Abilities implements Visitor{
         dmg = dmg * land_bonus;
         dmg += Constants.Knight_Modificator_F*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        k.setHP(result);
+//        System.out.println("Fireblast:" + result);
+        k.setHP_current(result);
     }
 
     @Override
@@ -56,8 +56,8 @@ public class Fireblast extends Abilities implements Visitor{
         dmg = dmg * land_bonus;
         dmg -= Constants.Rogue_Modificator_F*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        r.setHP(result);
+//        System.out.println(result);
+        r.setHP_current(result);
     }
 
     @Override
@@ -68,10 +68,11 @@ public class Fireblast extends Abilities implements Visitor{
             land_bonus += Constants.Volcanic_Bonus;
         }
         dmg = dmg * land_bonus;
+        w.setDamage_rec(dmg);
         dmg += common.Constants.Wizard_Modificator_F*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
-        w.setHP(result);
+//        System.out.println(result);
+        w.setHP_current(result);
     }
 
     @Override

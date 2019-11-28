@@ -31,8 +31,8 @@ public class Drain extends Abilities implements Visitor {
         dmgpercent -= dmgpercent* Constants.Pyromancer_Modificator_Dr;
         float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* Constants.Hp_Pyromancer, p.getHP());
         int result = Math.round(dmg);
-        System.out.println(result);
-        p.setHP(result);
+//        System.out.println(result);
+        p.setHP_current(result);
     }
 
     @Override
@@ -46,8 +46,8 @@ public class Drain extends Abilities implements Visitor {
         dmgpercent += dmgpercent* Constants.Knight_Modificator_Dr;
         float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* Constants.Hp_Knight, k.getHP());
         int result = Math.round(dmg);
-        System.out.println(result);
-        k.setHP(result);
+//        System.out.println(result);
+        k.setHP_current(result);
     }
 
     @Override
@@ -61,8 +61,8 @@ public class Drain extends Abilities implements Visitor {
         dmgpercent -= dmgpercent* Constants.Rogue_Modificator_Dr;
         float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* Constants.Hp_Roque, r.getHP());
         int result = Math.round(dmg);
-        System.out.println(result);
-        r.setHP(result);
+//        System.out.println(result);
+        r.setHP_current(result);
     }
 
     @Override
@@ -73,10 +73,12 @@ public class Drain extends Abilities implements Visitor {
             land_bonus += Constants.Desert_Bonus;
         }
         dmgpercent = dmgpercent * land_bonus;
-        dmgpercent += dmgpercent* Constants.Wirzard_Modificator_Dr;
         float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* Constants.Hp_Wizard, w.getHP());
+        w.setDamage_rec(dmg);
+        dmgpercent += dmgpercent* Constants.Wirzard_Modificator_Dr;
+        dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* Constants.Hp_Wizard, w.getHP());
         int result = Math.round(dmg);
-        System.out.println(result);
-        w.setHP(result);
+//        System.out.println(result);
+        w.setHP_current(result);
     }
 }

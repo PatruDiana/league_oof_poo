@@ -28,8 +28,8 @@ public class Slam extends Abilities implements Visitor {
         dmg = dmg * land_bonus;
         dmg -= dmg* Constants.Pyromancer_Modificator_S;
         int result = Math.round(dmg);
-        System.out.println(result);
-        p.setHP(result);
+//        System.out.println("Slam: " + result);
+        p.setHP_current(result);
         p.setDamage_overtime(0, nr_rounds_overtime, true);
     }
 
@@ -43,8 +43,8 @@ public class Slam extends Abilities implements Visitor {
         dmg = dmg * land_bonus;
         dmg += dmg* Constants.Knight_Modificator_S;
         int result = Math.round(dmg);
-        System.out.println(result);
-        k.setHP(result);
+//        System.out.println(result);
+        k.setHP_current(result);
         k.setDamage_overtime(0, nr_rounds_overtime, true);
 
     }
@@ -59,8 +59,8 @@ public class Slam extends Abilities implements Visitor {
         dmg = dmg * land_bonus;
         dmg -= dmg* Constants.Rogue_Modificator_S;
         int result = Math.round(dmg);
-        System.out.println(result);
-        r.setHP(result);
+//        System.out.println(result);
+        r.setHP_current(result);
         r.setDamage_overtime(0, nr_rounds_overtime, true);
 
     }
@@ -73,10 +73,11 @@ public class Slam extends Abilities implements Visitor {
             land_bonus += Constants.Land_Bonus;
         }
         dmg = dmg * land_bonus;
+        w.setDamage_rec(dmg);
         dmg += dmg* Constants.Wizard_Modificator_S;
         int result = Math.round(dmg);
-        System.out.println(result);
-        w.setHP(result);
+//        System.out.println(result);
+        w.setHP_current(result);
         w.setDamage_overtime(0, nr_rounds_overtime, true);
     }
 

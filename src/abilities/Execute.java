@@ -26,7 +26,7 @@ public class Execute extends  Abilities implements Visitor {
         float hp_limit = damageprocent * Constants.Hp_Pyromancer;
         int limit = Math.round(hp_limit);
         if(p.getHP() < limit) {
-            p.setHP(p.getHP());
+            p.setHP_current(p.getHP());
         } else {
             float dmg = damage;
             float land_bonus = land_modificator;
@@ -36,8 +36,8 @@ public class Execute extends  Abilities implements Visitor {
             dmg = dmg * land_bonus;
             dmg += dmg * Constants.Pyromancer_Modificator_E;
             int result = Math.round(dmg);
-            System.out.println(result);
-            p.setHP(result);
+//            System.out.println("Execute: " + result);
+            p.setHP_current(result);
         }
     }
 
@@ -46,7 +46,7 @@ public class Execute extends  Abilities implements Visitor {
         float hp_limit = damageprocent * Constants.Hp_Knight;
         int limit = Math.round(hp_limit);
         if(k.getHP() < limit) {
-            k.setHP(k.getHP());
+            k.setHP_current(k.getHP());
         } else {
             float dmg = damage;
             float land_bonus = land_modificator;
@@ -56,8 +56,8 @@ public class Execute extends  Abilities implements Visitor {
             dmg = dmg * land_bonus;
             dmg += dmg * Constants.Knight_Modificator_E;
             int result = Math.round(dmg);
-            System.out.println(result);
-            k.setHP(result);
+//            System.out.println(result);
+            k.setHP_current(result);
         }
     }
 
@@ -65,9 +65,11 @@ public class Execute extends  Abilities implements Visitor {
     public void visit(Rogue r) {
         float hp_limit = damageprocent * Constants.Hp_Roque;
         int limit = Math.round(hp_limit);
+//        System.out.println(limit);
         if(r.getHP() < limit) {
-            r.setHP(r.getHP());
+            r.setHP_current(r.getHP());
         } else {
+//            System.out.println("nu e ");
             float dmg = damage;
             float land_bonus = land_modificator;
             if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Land_type) {
@@ -76,8 +78,8 @@ public class Execute extends  Abilities implements Visitor {
             dmg = dmg * land_bonus;
             dmg += dmg * Constants.Rogue_Modificator_E;
             int result = Math.round(dmg);
-            System.out.println(result);
-            r.setHP(result);
+//            System.out.println(result);
+            r.setHP_current(result);
         }
     }
 
@@ -86,7 +88,7 @@ public class Execute extends  Abilities implements Visitor {
         float hp_limit = damageprocent * Constants.Hp_Wizard;
         int limit = Math.round(hp_limit);
         if(w.getHP() < limit) {
-            w.setHP(w.getHP());
+            w.setHP_current(w.getHP());
         } else {
             float dmg = damage;
             float land_bonus = land_modificator;
@@ -94,10 +96,11 @@ public class Execute extends  Abilities implements Visitor {
                 land_bonus += Constants.Land_Bonus;
             }
             dmg = dmg * land_bonus;
+            w.setDamage_rec(dmg);
             dmg -= dmg * Constants.Wizard_Modificator_E;
             int result = Math.round(dmg);
-            System.out.println(result);
-            w.setHP(result);
+//            System.out.println(result);
+            w.setHP_current(result);
         }
     }
 

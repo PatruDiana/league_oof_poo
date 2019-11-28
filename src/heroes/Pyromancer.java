@@ -1,6 +1,8 @@
 package heroes;
 
+import abilities.Visitor;
 import common.Constants;
+import abilities.AbilitiesFactory;
 
 public class Pyromancer extends Hero {
     Pyromancer(int row, int col) {
@@ -8,22 +10,17 @@ public class Pyromancer extends Hero {
         this.col = col;
         this.HP = Constants.Hp_Pyromancer;
         this.type = "P";
+        this.abilities = AbilitiesFactory.getAbilities(type);
+        this.freeze = false;
+        this.death = false;
+        this.HP_current = Constants.Hp_Pyromancer;
     }
+
+
 
     @Override
-    public String toString() {
-        return "Pyromancer{" +
-                "row=" + row +
-                ", col=" + col +
-                ", type='" + type + '\'' +
-                ", level=" + level +
-                ", XP=" + XP +
-                ", HP=" + HP +
-                '}';
+    public void accept(Visitor v) {
+            v.visit(this);
     }
 
-    @Override
-    public void accept(abilities.Visitor v) {
-
-    }
 }
