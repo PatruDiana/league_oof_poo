@@ -46,7 +46,7 @@ public class Game {
 
     public void startgame() {
 //        for (int i = 0; i < heroes.size(); i++) {
-//            System.out.println(heroes.get(i).toString());
+//            System.out.println(heroes.get(i).getType());
 //        }
         for (int i = 0; i < rounds; i++) {
             for (int j = 0; j < heroes.size(); j++) {
@@ -60,35 +60,45 @@ public class Game {
 //                System.out.println(heroes.get(j).toString());
             }
             for (int j = 0; j < heroes.size(); j++) {
+//                heroes.get(j).getDamageOvertime();
                 heroes.get(j).Damage_Overtime();
             }
+//            for(int j = 0 ; j < heroes.size(); j++ ) {
+//                System.out.println(heroes.get(j).toString());
+//            }
             for (int j = 0; j < heroes.size(); j++) {
                 for (int k = j + 1; k < heroes.size(); k++) {
                     if (heroes.get(j).getRow() == heroes.get(k).getRow() &&
                             heroes.get(j).getCol() == heroes.get(k).getCol()) {
-
-//                        System.out.println(heroes.get(j).getRow() + " " + heroes.get(k).getCol());
-                        if(!heroes.get(j).isDeath() || !heroes.get(k).isDeath()) {
+//                        System.out.println("primul jucator este: " +heroes.get(j).getType());
+                        if (!heroes.get(j).isDeath() && !heroes.get(k).isDeath()) {
                             if (heroes.get(j).getType().equals("W")) {
-                                System.out.println("da");
-                                heroes.get(k).fight(heroes.get(j).getAbilities());
                                 heroes.get(j).fight(heroes.get(k).getAbilities());
+                                heroes.get(j).getAbilities().get(1).setDamagereceived(heroes.get(j).getDamage_rec());
+                                heroes.get(k).fight(heroes.get(j).getAbilities());
                             } else {
-                                heroes.get(j).fight(heroes.get(k).getAbilities());
+//                                System.out.println("intra aici");
                                 heroes.get(k).fight(heroes.get(j).getAbilities());
+//                                System.out.println("damage primit "+ heroes.get(k).getDamage_rec());
+                                if (heroes.get(k).getType().equals("W")) {
+                                    heroes.get(k).getAbilities().get(1).setDamagereceived(heroes.get(k).getDamage_rec());
+                                }
+                                heroes.get(j).fight(heroes.get(k).getAbilities());
+
                             }
-                        }
 //                        System.out.println(heroes.get(j).getHP_current());
 //                        System.out.println(heroes.get(k).getHP_current());
-                        heroes.get(j).setHP();
-                        heroes.get(k).setHP();
+                            heroes.get(j).setHP();
+                            heroes.get(k).setHP();
 //                        System.out.println(heroes.get(j).getHP());
 //                        System.out.println(heroes.get(k).getHP());
-                        if(heroes.get(j).isDeath()) {
-                            heroes.get(k).setXP(heroes.get(j).getLevel());
-                        }
-                        if (heroes.get(k).isDeath()) {
-                            heroes.get(j).setXP(heroes.get(k).getLevel());
+                            if (heroes.get(j).isDeath()) {
+                                heroes.get(k).setXP(heroes.get(j).getLevel());
+                            }
+                            if (heroes.get(k).isDeath()) {
+                                heroes.get(j).setXP(heroes.get(k).getLevel());
+                            }
+
                         }
                     }
                 }
@@ -98,12 +108,11 @@ public class Game {
                     heroes.get(j).resetDamageRec();
                 }
             }
-            //to do  wizard.resetdamagerecv
-            System.out.println();
-            for(Hero hero : heroes) {
-                System.out.println(hero.toString());
-//                System.out.println(hero.isDeath());
-            }
+//            System.out.println();
+//            for(Hero hero : heroes) {
+//                System.out.println(hero.toString());
+////                System.out.println(hero.isDeath());
+//            }
         }
     }
 

@@ -10,6 +10,7 @@ public abstract class Hero implements Visitable {
     protected String type;
     protected int level = 0;
     protected int XP = 0;
+    protected int HP_max;
     protected int HP;
     protected int damage_rec;
     ArrayList<Abilities> abilities;
@@ -47,6 +48,7 @@ public abstract class Hero implements Visitable {
         this.damage_overtime = damage_overtime;
         this.nr_round_overtime = nr_round_overtime;
         this.freeze = freeze;
+//        System.out.println(damage_overtime + " " + nr_round_overtime + " " + freeze);
     }
     public void Damage_Overtime() {
         if(nr_round_overtime != 0) {
@@ -66,7 +68,9 @@ public abstract class Hero implements Visitable {
             setDeath();
         }
     }
-
+    public void getDamageOvertime() {
+        System.out.println(damage_overtime + " " + nr_round_overtime + " " + freeze);
+    }
     public int getHP_current() {
         return HP_current;
     }
@@ -79,9 +83,7 @@ public abstract class Hero implements Visitable {
     }
     public void fight(ArrayList<Abilities> a) {
         for(int i = 0; i < a.size(); i++) {
-            if(!death) {
-                accept(a.get(i));
-            }
+            accept(a.get(i));
         }
     }
     public void resetDamageRec() {
@@ -103,6 +105,7 @@ public abstract class Hero implements Visitable {
     public void updatelevel() {
         while (XP >= level * 50 + 250) {
             level++;
+            setHPmax();
             for(int i = 0; i < abilities.size(); i++) {
                 abilities.get(i).setDamage();
             }
@@ -119,4 +122,16 @@ public abstract class Hero implements Visitable {
             return type + " " + level + " " + XP + " " + HP + " " + row + " " + col;
         }
     }
+    public void setDamage_rec(float damage_rec) {
+        this.damage_rec += Math.round(damage_rec);
+    }
+
+
+    public int getDamage_rec() {
+        return this.damage_rec;
+    }
+    public void setHPmax(){
+
+    }
+
 }

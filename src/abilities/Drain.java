@@ -61,7 +61,7 @@ public class Drain extends Abilities implements Visitor {
         dmgpercent -= dmgpercent* Constants.Rogue_Modificator_Dr;
         float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* Constants.Hp_Roque, r.getHP());
         int result = Math.round(dmg);
-//        System.out.println(result);
+//        System.out.println("DRAIN: "+  result);
         r.setHP_current(result);
     }
 

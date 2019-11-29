@@ -21,35 +21,36 @@ public class Paralysis extends Abilities implements Visitor {
         float dmg = damage;
         float land_bonus = land_modificator;
         if (Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_type;
+            land_bonus += common.Constants.Woods_Bonus;
         }
         dmg = dmg * land_bonus;
         dmg += Constants.Pyromancer_Modificator_P*dmg;
         int result = Math.round(dmg);
-//        System.out.println(result);
+//        System.out.println("paralysis " + result);
         p.setHP_current(result);
         if (Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-            p.setDamage_overtime(0, nr_rounds, true);
+//            System.out.println("paralysis");
+            p.setDamage_overtime(result, nr_rounds, true);
         } else {
-            p.setDamage_overtime(0, nr_rounds_overtime, true);
+            p.setDamage_overtime(result, nr_rounds_overtime, true);
         }
     }
 
     @Override
     public void visit(Knight k) {
         float dmg = damage;
-        System.out.println(dmg);
+//        System.out.println(dmg);
         float land_bonus = land_modificator;
         if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type) {
             land_bonus += Constants.Woods_Bonus;
-            System.out.println("intra woods");
-            System.out.println(land_bonus);
+//            System.out.println("intra woods");
+//            System.out.println(land_bonus);
         }
         dmg = dmg * land_bonus;
         dmg -= Constants.Knight_Modificator_P*dmg;
         int result = Math.round(dmg);
-        System.out.println(result);
+//        System.out.println(result);
         k.setHP_current(result);
         if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
@@ -65,7 +66,7 @@ public class Paralysis extends Abilities implements Visitor {
         float dmg = damage;
         float land_bonus = land_modificator;
         if (Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_type;
+            land_bonus += common.Constants.Woods_Bonus;
         }
         dmg = dmg * land_bonus;
         dmg -= Constants.Rogue_Modificator_P*dmg;
@@ -74,9 +75,9 @@ public class Paralysis extends Abilities implements Visitor {
         r.setHP_current(result);
         if (Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-            r.setDamage_overtime(0, nr_rounds, true);
+            r.setDamage_overtime(result, nr_rounds, true);
         } else {
-            r.setDamage_overtime(0, nr_rounds_overtime, true);
+            r.setDamage_overtime(result, nr_rounds_overtime, true);
         }
 
     }
@@ -86,18 +87,20 @@ public class Paralysis extends Abilities implements Visitor {
         float dmg = damage;
         float land_bonus = land_modificator;
         if (Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_type;
+            land_bonus += common.Constants.Woods_Bonus;
         }
         dmg = dmg * land_bonus;
+//        System.out.println("p fara race: "+ dmg);
+        w.setDamage_rec(dmg);
         dmg += Constants.Wizard_Modificator_P*dmg;
         int result = Math.round(dmg);
-//        System.out.println(result);
+//        System.out.println("paralysis: "+result);
         w.setHP_current(result);
         if (Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Woods_type){
             int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-            w.setDamage_overtime(0, nr_rounds, true);
+            w.setDamage_overtime(result, nr_rounds, true);
         } else {
-            w.setDamage_overtime(0, nr_rounds_overtime, true);
+            w.setDamage_overtime(result, nr_rounds_overtime, true);
         }
 
     }

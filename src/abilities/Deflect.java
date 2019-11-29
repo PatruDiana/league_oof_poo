@@ -17,6 +17,7 @@ public class Deflect extends Abilities implements Visitor {
     }
     public void setDamagereceived(int damagereceived) {
         damage = damagereceived;
+//        System.out.println(damagereceived);
     }
     @Override
     public void visit(Pyromancer p) {
@@ -40,11 +41,12 @@ public class Deflect extends Abilities implements Visitor {
         if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Desert_type) {
             land_bonus += Constants.Desert_Bonus;
         }
+//       System.out.println(dmgpercent + " " +  damage);
         dmgpercent = dmgpercent * land_bonus;
         dmgpercent += dmgpercent * Constants.Knight_Modificator_De;
         float dmg = dmgpercent * damage;
         int result = Math.round(dmg);
-//        System.out.println(result);
+//        System.out.println("deflect " + result);
         k.setHP_current(result);
     }
 
@@ -59,7 +61,7 @@ public class Deflect extends Abilities implements Visitor {
         dmgpercent += dmgpercent * Constants.Roque_Modificator_De;
         float dmg = dmgpercent * damage;
         int result = Math.round(dmg);
-//        System.out.println(result);
+//        System.out.println("DEFLECT:" +result);
         r.setHP_current(result);
     }
 

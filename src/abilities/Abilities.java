@@ -7,6 +7,8 @@ public abstract class Abilities implements Visitor {
     protected float land_modificator = 1;
     protected float damageprocent;
     public void setDamage(){
+    }
+    public void setDamagereceived(int damagereceived) {
 
     }
 }

@@ -73,6 +73,7 @@ public class Slam extends Abilities implements Visitor {
             land_bonus += Constants.Land_Bonus;
         }
         dmg = dmg * land_bonus;
+//        System.out.println("rev" + dmg);
         w.setDamage_rec(dmg);
         dmg += dmg* Constants.Wizard_Modificator_S;
         int result = Math.round(dmg);

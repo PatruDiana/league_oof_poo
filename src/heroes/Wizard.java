@@ -16,6 +16,7 @@ public class Wizard extends Hero {
         this.freeze = false;
         this.death = false;
         this.HP_current = Constants.Hp_Wizard;
+        this.HP_max = Constants.Hp_Wizard;
     }
 
 
@@ -23,12 +24,9 @@ public class Wizard extends Hero {
     public void accept(Visitor v) {
             v.visit(this);
     }
-
-    public void setDamage_rec(float damage_rec) {
-        this.damage_rec += Math.round(damage_rec);
-    }
-
-    public int getDamage_rec() {
-        return damage_rec;
+    public void setHPmax() {
+        HP_max += common.Constants.Extra_Hp_Wizard;
+        HP = HP_max;
+        HP_current = HP_max;
     }
 }
