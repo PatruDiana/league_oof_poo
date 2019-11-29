@@ -6,26 +6,32 @@ import abilities.AbilitiesFactory;
 
 
 public class Knight extends Hero {
-    Knight(int row, int col) {
+    Knight(final int row, final int col) {
         this.row = row;
         this.col = col;
-        this.HP = Constants.Hp_Knight;
+        this.hp = Constants.HP_KNIGHT;
         this.type = "K";
         this.abilities = AbilitiesFactory.getAbilities(type);
         this.freeze = false;
         this.death = false;
-        this.HP_current = Constants.Hp_Knight;
-        this.HP_max = Constants.Hp_Knight;
+        this.hpCurrent = Constants.HP_KNIGHT;
+        this.hpmax = Constants.HP_KNIGHT;
     }
 
-
-    @Override
-    public void accept(Visitor v) {
+    /**
+     *
+     * @param v
+     */
+    public void accept(final Visitor v) {
         v.visit(this);
     }
+
+    /**
+     *
+     */
     public void setHPmax() {
-        HP_max += common.Constants.Extra_Hp_Knight;
-        HP = HP_max;
-        HP_current = HP_max;
+        hpmax += common.Constants.EXTRA_HP_KNIGHT;
+        hp = hpmax;
+        hpCurrent = hpmax;
     }
 }

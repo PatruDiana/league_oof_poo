@@ -9,98 +9,105 @@ import map.Map;
 
 public class Paralysis extends Abilities implements Visitor {
     public Paralysis() {
-        damage = Constants.Damage_Paralysis;
-        nr_rounds_overtime = Constants.Nr_Rounds_Overtime_Min;
+        damage = Constants.DAMAGE_PARALYSIS;
+        nrRoundsOvertime = Constants.NR_ROUNDS_OVERTIME_MIN;
     }
+
+    /**
+     *
+     */
     public void setDamage() {
-        damage += Constants.Extra_Damage_Paraysis;
+        damage += Constants.EXTRA_DAMAGE_PARAYSIS;
     }
 
-    @Override
-    public void visit(Pyromancer p) {
+    /**
+     *
+     * @param p
+     */
+    public void visit(final Pyromancer p) {
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if (Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Woods_type) {
-            land_bonus += common.Constants.Woods_Bonus;
+        float landBonus = landModificator;
+        if (Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += common.Constants.WOODS_BONUS;
         }
-        dmg = dmg * land_bonus;
-        dmg += Constants.Pyromancer_Modificator_P*dmg;
+        dmg = dmg * landBonus;
+        dmg += Constants.PYROMANCER_MODIFICATOR_P * dmg;
         int result = Math.round(dmg);
-//        System.out.println("paralysis " + result);
-        p.setHP_current(result);
-        if (Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Woods_type){
-            int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-//            System.out.println("paralysis");
-            p.setDamage_overtime(result, nr_rounds, true);
+        p.setHpCurrent(result);
+        if (Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.WOODS_TYPE) {
+            int nrRounds = Constants.NR_ROUNDS_OVERTIME_MAX;
+            p.setDamageOvertime(result, nrRounds, true);
         } else {
-            p.setDamage_overtime(result, nr_rounds_overtime, true);
+            p.setDamageOvertime(result, nrRoundsOvertime, true);
         }
     }
 
-    @Override
-    public void visit(Knight k) {
+    /**
+     *
+     * @param k
+     */
+    public void visit(final Knight k) {
         float dmg = damage;
-//        System.out.println(dmg);
-        float land_bonus = land_modificator;
-        if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_Bonus;
-//            System.out.println("intra woods");
-//            System.out.println(land_bonus);
+        float landBonus = landModificator;
+        if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += Constants.WOODS_BONUS;
         }
-        dmg = dmg * land_bonus;
-        dmg -= Constants.Knight_Modificator_P*dmg;
+        dmg = dmg * landBonus;
+        dmg -= Constants.KNIGHT_MODIFICATOR_P * dmg;
         int result = Math.round(dmg);
-//        System.out.println(result);
-        k.setHP_current(result);
-        if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type){
-            int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-            k.setDamage_overtime(result, nr_rounds, true);
+        k.setHpCurrent(result);
+        if (Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.WOODS_TYPE) {
+            int nrRounds = Constants.NR_ROUNDS_OVERTIME_MAX;
+            k.setDamageOvertime(result, nrRounds, true);
         } else {
-            k.setDamage_overtime(result, nr_rounds_overtime, true);
-        }
-
-    }
-
-    @Override
-    public void visit(Rogue r) {
-        float dmg = damage;
-        float land_bonus = land_modificator;
-        if (Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Woods_type) {
-            land_bonus += common.Constants.Woods_Bonus;
-        }
-        dmg = dmg * land_bonus;
-        dmg -= Constants.Rogue_Modificator_P*dmg;
-        int result = Math.round(dmg);
-//        System.out.println(result);
-        r.setHP_current(result);
-        if (Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Woods_type){
-            int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-            r.setDamage_overtime(result, nr_rounds, true);
-        } else {
-            r.setDamage_overtime(result, nr_rounds_overtime, true);
+            k.setDamageOvertime(result, nrRoundsOvertime, true);
         }
 
     }
 
-    @Override
-    public void visit(Wizard w) {
+    /**
+     *
+     * @param r
+     */
+    public void visit(final Rogue r) {
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if (Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Woods_type) {
-            land_bonus += common.Constants.Woods_Bonus;
+        float landBonus = landModificator;
+        if (Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += common.Constants.WOODS_BONUS;
         }
-        dmg = dmg * land_bonus;
-//        System.out.println("p fara race: "+ dmg);
-        w.setDamage_rec(dmg);
-        dmg += Constants.Wizard_Modificator_P*dmg;
+        dmg = dmg * landBonus;
+        dmg -= Constants.ROGUE_MODIFICATOR_P * dmg;
         int result = Math.round(dmg);
-//        System.out.println("paralysis: "+result);
-        w.setHP_current(result);
-        if (Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Woods_type){
-            int nr_rounds = Constants.Nr_Rounds_Overtime_Max;
-            w.setDamage_overtime(result, nr_rounds, true);
+        r.setHpCurrent(result);
+        if (Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.WOODS_TYPE) {
+            int nrRounds = Constants.NR_ROUNDS_OVERTIME_MAX;
+            r.setDamageOvertime(result, nrRounds, true);
         } else {
-            w.setDamage_overtime(result, nr_rounds_overtime, true);
+            r.setDamageOvertime(result, nrRoundsOvertime, true);
+        }
+
+    }
+
+    /**
+     *
+     * @param w
+     */
+    public void visit(final Wizard w) {
+        float dmg = damage;
+        float landBonus = landModificator;
+        if (Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += common.Constants.WOODS_BONUS;
+        }
+        dmg = dmg * landBonus;
+        w.setDamageRec(dmg);
+        dmg += Constants.WIZARD_MODIFICATOR_P * dmg;
+        int result = Math.round(dmg);
+        w.setHpCurrent(result);
+        if (Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.WOODS_TYPE) {
+            int nrRounds = Constants.NR_ROUNDS_OVERTIME_MAX;
+            w.setDamageOvertime(result, nrRounds, true);
+        } else {
+            w.setDamageOvertime(result, nrRoundsOvertime, true);
         }
 
     }

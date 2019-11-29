@@ -7,66 +7,83 @@ import heroes.Rogue;
 import heroes.Wizard;
 
 public class Deflect extends Abilities implements Visitor {
-    Deflect () {
-      damageprocent = Constants.Percent_Deflect;
+    Deflect() {
+      damageprocent = Constants.PERCENT_DEFLECT;
     }
+
+    /**
+     *
+     */
     public void setDamage() {
-        if (damageprocent < Constants.Maxim_Percent_Deflect - 1) {
-            damageprocent += Constants.Extra_Percent_Deflect;
+        if (damageprocent < Constants.MAXIM_PERCENT_DEFLECT - 1) {
+            damageprocent += Constants.EXTRA_PERCENT_DEFLECT;
         }
     }
-    public void setDamagereceived(int damagereceived) {
+
+    /**
+     *
+     * @param damagereceived
+     */
+    public void setDamagereceived(final int damagereceived) {
         damage = damagereceived;
-//        System.out.println(damagereceived);
-    }
-    @Override
-    public void visit(Pyromancer p) {
-        float dmgpercent = damageprocent;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Desert_type) {
-            land_bonus += Constants.Desert_Bonus;
-        }
-        dmgpercent = dmgpercent * land_bonus;
-        dmgpercent += dmgpercent* Constants.Pyromancer_Modificator_De;
-        float dmg = dmgpercent * damage;
-        int result = Math.round(dmg);
-//        System.out.println(result);
-        p.setHP_current(result);
     }
 
-    @Override
-    public void visit(Knight k) {
+    /**
+     *
+     * @param p
+     */
+    public void visit(final Pyromancer p) {
         float dmgpercent = damageprocent;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Desert_type) {
-            land_bonus += Constants.Desert_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.DESERT_TYPE) {
+            landBonus += Constants.DESERT_BONUS;
         }
-//       System.out.println(dmgpercent + " " +  damage);
-        dmgpercent = dmgpercent * land_bonus;
-        dmgpercent += dmgpercent * Constants.Knight_Modificator_De;
+        dmgpercent = dmgpercent * landBonus;
+        dmgpercent += dmgpercent * Constants.PYROMANCER_MODIFICATOR_DE;
         float dmg = dmgpercent * damage;
         int result = Math.round(dmg);
-//        System.out.println("deflect " + result);
-        k.setHP_current(result);
+        p.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Rogue r) {
+    /**
+     *
+     * @param k
+     */
+    public void visit(final Knight k) {
         float dmgpercent = damageprocent;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Desert_type) {
-            land_bonus += Constants.Desert_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.DESERT_TYPE) {
+            landBonus += Constants.DESERT_BONUS;
         }
-        dmgpercent = dmgpercent * land_bonus;
-        dmgpercent += dmgpercent * Constants.Roque_Modificator_De;
+        dmgpercent = dmgpercent * landBonus;
+        dmgpercent += dmgpercent * Constants.KNIGHT_MODIFICATOR_DE;
         float dmg = dmgpercent * damage;
         int result = Math.round(dmg);
-//        System.out.println("DEFLECT:" +result);
-        r.setHP_current(result);
+        k.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Wizard w) {
+    /**
+     *
+     * @param r
+     */
+    public void visit(final Rogue r) {
+        float dmgpercent = damageprocent;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.DESERT_TYPE) {
+            landBonus += Constants.DESERT_BONUS;
+        }
+        dmgpercent = dmgpercent * landBonus;
+        dmgpercent += dmgpercent * Constants.ROQUE_MODIFICATOR_DE;
+        float dmg = dmgpercent * damage;
+        int result = Math.round(dmg);
+        r.setHpCurrent(result);
+    }
+
+    /**
+     *
+     * @param w
+     */
+    public void visit(final Wizard w) {
 
     }
 }

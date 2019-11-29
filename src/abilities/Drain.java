@@ -9,76 +9,92 @@ import heroes.Wizard;
 public class Drain extends Abilities implements Visitor {
 
     public Drain() {
-        damageprocent = Constants.Percent_Drain;
+        damageprocent = Constants.PERCENT_DRAIN;
 
     }
+
+    /**
+     *
+     */
     public void setDamage() {
-        damageprocent += Constants.Extra_Percent_Drain;
+        damageprocent += Constants.EXTRA_PERCENT_DRAIN;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getDamage() {
         return damage;
     }
 
-    @Override
-    public void visit(Pyromancer p) {
+    /**
+     *
+     * @param p
+     */
+    public void visit(final Pyromancer p) {
         float dmgpercent = damageprocent;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Desert_type) {
-            land_bonus += Constants.Desert_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.DESERT_TYPE) {
+            landBonus += Constants.DESERT_BONUS;
         }
-        dmgpercent = dmgpercent * land_bonus;
-        dmgpercent -= dmgpercent* Constants.Pyromancer_Modificator_Dr;
-        float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* p.getHP_max(), p.getHP_current());
+        dmgpercent = dmgpercent * landBonus;
+        dmgpercent -= dmgpercent * Constants.PYROMANCER_MODIFICATOR_DR;
+        float dmg = dmgpercent * Math.min(Constants.HP_MIN_DRAIN * p.getHpmax(), p.getHpCurrent());
         int result = Math.round(dmg);
-//        System.out.println(result);
-        p.setHP_current(result);
+        p.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Knight k) {
+    /**
+     *
+     * @param k
+     */
+    public void visit(final Knight k) {
         float dmgpercent = damageprocent;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Desert_type) {
-            land_bonus += Constants.Desert_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.DESERT_TYPE) {
+            landBonus += Constants.DESERT_BONUS;
         }
-        dmgpercent = dmgpercent * land_bonus;
-        dmgpercent += dmgpercent* Constants.Knight_Modificator_Dr;
-        float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* k.getHP_max(), k.getHP_current());
+        dmgpercent = dmgpercent * landBonus;
+        dmgpercent += dmgpercent * Constants.KNIGHT_MODIFICATOR_DR;
+        float dmg = dmgpercent * Math.min(Constants.HP_MIN_DRAIN * k.getHpmax(), k.getHpCurrent());
         int result = Math.round(dmg);
-//        System.out.println(result);
-        k.setHP_current(result);
+        k.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Rogue r) {
+    /**
+     *
+     * @param r
+     */
+    public void visit(final Rogue r) {
         float dmgpercent = damageprocent;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Desert_type) {
-            land_bonus += Constants.Desert_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.DESERT_TYPE) {
+            landBonus += Constants.DESERT_BONUS;
         }
-        dmgpercent = dmgpercent * land_bonus;
-        dmgpercent -= dmgpercent* Constants.Rogue_Modificator_Dr;
-        float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* r.getHP_max(), r.getHP_current());
+        dmgpercent = dmgpercent * landBonus;
+        dmgpercent -= dmgpercent * Constants.ROGUE_MODIFICATOR_DR;
+        float dmg = dmgpercent * Math.min(Constants.HP_MIN_DRAIN * r.getHpmax(), r.getHpCurrent());
         int result = Math.round(dmg);
-//        System.out.println("DRAIN: "+  result);
-        r.setHP_current(result);
+        r.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Wizard w) {
+    /**
+     *
+     * @param w
+     */
+    public void visit(final Wizard w) {
         float dmgpercent = damageprocent;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Desert_type) {
-            land_bonus += Constants.Desert_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.DESERT_TYPE) {
+            landBonus += Constants.DESERT_BONUS;
         }
-        dmgpercent = dmgpercent * land_bonus;
-        float dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* w.getHP_max(), w.getHP_current());
-        w.setDamage_rec(dmg);
-        dmgpercent += dmgpercent* Constants.Wirzard_Modificator_Dr;
-        dmg = dmgpercent * Math.min(Constants.HP_Min_Drain* w.getHP_max(), w.getHP_current());
+        dmgpercent = dmgpercent * landBonus;
+        float dmg = dmgpercent * Math.min(Constants.HP_MIN_DRAIN * w.getHpmax(), w.getHpCurrent());
+        w.setDamageRec(dmg);
+        dmgpercent += dmgpercent * Constants.WIRZARD_MODIFICATOR_DR;
+        dmg = dmgpercent * Math.min(Constants.HP_MIN_DRAIN * w.getHpmax(), w.getHpCurrent());
         int result = Math.round(dmg);
-//        System.out.println(result);
-        w.setHP_current(result);
+        w.setHpCurrent(result);
     }
 }

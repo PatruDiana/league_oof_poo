@@ -6,79 +6,88 @@ import heroes.Pyromancer;
 import heroes.Rogue;
 import heroes.Wizard;
 
-public class Fireblast extends Abilities implements Visitor{
+public class Fireblast extends Abilities implements Visitor {
     Fireblast() {
-        damage = Constants.Damage_Fireblast;
-    }
-    public void setDamage() {
-        damage += Constants.Extra_Damage_Fireblast;
+        damage = Constants.DAMAGE_FIREBLAST;
     }
 
+    /**
+     *
+     */
+    public void setDamage() {
+        damage += Constants.EXTRA_DAMAGE_FIREBLAST;
+    }
+
+    /**
+     *
+     * @return
+     */
     public int getDamage() {
         return damage;
     }
 
-    @Override
-    public void visit(Pyromancer p) {
+    /**
+     *
+     * @param p
+     */
+    public void visit(final Pyromancer p) {
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Volcanic_type) {
-            land_bonus += Constants.Volcanic_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.VOLCANIC_TYPE) {
+            landBonus += Constants.VOLCANIC_BONUS;
         }
-        dmg = dmg * land_bonus;
-        dmg -= Constants.Pyromancer_Modificator_F*dmg;
+        dmg = dmg * landBonus;
+        dmg -= Constants.PYROMANCER_MODIFICATOR_F * dmg;
         int result = Math.round(dmg);
-//        System.out.println(result);
-        p.setHP_current(result);
+        p.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Knight k) {
+    /**
+     *
+     * @param k
+     */
+    public void visit(final Knight k) {
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Volcanic_type) {
-            land_bonus += Constants.Volcanic_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.VOLCANIC_TYPE) {
+            landBonus += Constants.VOLCANIC_BONUS;
         }
-        dmg = dmg * land_bonus;
-        dmg += Constants.Knight_Modificator_F*dmg;
+        dmg = dmg * landBonus;
+        dmg += Constants.KNIGHT_MODIFICATOR_F * dmg;
         int result = Math.round(dmg);
-//        System.out.println("Fireblast:" + result);
-        k.setHP_current(result);
+        k.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Rogue r) {
+    /**
+     *
+     * @param r
+     */
+    public void visit(final Rogue r) {
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Volcanic_type) {
-            land_bonus += Constants.Volcanic_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.VOLCANIC_TYPE) {
+            landBonus += Constants.VOLCANIC_BONUS;
         }
-        dmg = dmg * land_bonus;
-        dmg -= Constants.Rogue_Modificator_F*dmg;
+        dmg = dmg * landBonus;
+        dmg -= Constants.ROGUE_MODIFICATOR_F * dmg;
         int result = Math.round(dmg);
-//        System.out.println(result);
-        r.setHP_current(result);
+        r.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Wizard w) {
+    /**
+     *
+     * @param w
+     */
+    public void visit(final Wizard w) {
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Volcanic_type) {
-            land_bonus += Constants.Volcanic_Bonus;
+        float landBonus = landModificator;
+        if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.VOLCANIC_TYPE) {
+            landBonus += Constants.VOLCANIC_BONUS;
         }
-        dmg = dmg * land_bonus;
-        w.setDamage_rec(dmg);
-        dmg += common.Constants.Wizard_Modificator_F*dmg;
+        dmg = dmg * landBonus;
+        w.setDamageRec(dmg);
+        dmg += common.Constants.WIZARD_MODIFICATOR_F * dmg;
         int result = Math.round(dmg);
-//        System.out.println(result);
-        w.setHP_current(result);
-    }
-
-    @Override
-    public String toString() {
-        return "Fireblast{" +
-                "damage=" + damage +
-                '}';
+        w.setHpCurrent(result);
     }
 }

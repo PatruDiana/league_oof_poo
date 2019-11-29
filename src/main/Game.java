@@ -1,12 +1,10 @@
 package main;
-
+import fileio.FileSystem;
 import heroes.Hero;
 import heroes.HeroFactory;
-
-import java.nio.file.FileSystem;
 import java.util.ArrayList;
 
-public class Game {
+public final class Game {
     private static Game instance = null;
     private ArrayList<Hero> heroes;
     private ArrayList<String> playersinfo;
@@ -14,8 +12,8 @@ public class Game {
     private ArrayList<Character> arraymoves;
     private int rounds;
 
-    private Game(ArrayList<String> playersinfo, ArrayList<Integer> coordplayers,
-                 ArrayList<Character> arraymoves, int rounds) {
+    private Game(final ArrayList<String> playersinfo, final ArrayList<Integer> coordplayers,
+                final ArrayList<Character> arraymoves, final int rounds) {
         this.playersinfo = playersinfo;
         this.heroes = new ArrayList<>(playersinfo.size());
         this.arraymoves = arraymoves;
@@ -23,8 +21,9 @@ public class Game {
         this.rounds = rounds;
     }
 
-    static Game getInstance(ArrayList<String> playersinfo, ArrayList<Integer> coordplayers,
-                            ArrayList<Character> arraymoves, int rounds) {
+    static Game getInstance(final ArrayList<String> playersinfo,
+                            final ArrayList<Integer> coordplayers,
+                            final ArrayList<Character> arraymoves, final int rounds) {
         instance = new Game(playersinfo, coordplayers, arraymoves, rounds);
         return instance;
     }
@@ -37,7 +36,8 @@ public class Game {
         int coord1 = 0;
         int coord2 = 1;
         for (int i = 0; i < playersinfo.size(); i++) {
-            Hero hero = HeroFactory.getHero(playersinfo.get(i), coordplayers.get(coord1), coordplayers.get(coord2));
+            Hero hero = HeroFactory.getHero(playersinfo.get(i),
+                    coordplayers.get(coord1), coordplayers.get(coord2));
             heroes.add(hero);
             coord1 = coord1 + 2;
             coord2 = coord1 + 1;
@@ -45,59 +45,41 @@ public class Game {
     }
 
     public void startgame() {
-//        for (int i = 0; i < heroes.size(); i++) {
-//            System.out.println(heroes.get(i).getType());
-//        }
         for (int i = 0; i < rounds; i++) {
-//            System.out.println("Round " + i);
             for (int j = 0; j < heroes.size(); j++) {
                 Character move = arraymoves.get(0);
-//                System.out.println(move);
                 heroes.get(j).setMove(move);
                 arraymoves.remove(0);
-//                for(char e : arraymoves) {
-//                    System.out.println(e + " ");
-//                }
-//                System.out.println(heroes.get(j).toString());
             }
             for (int j = 0; j < heroes.size(); j++) {
-//                heroes.get(j).getDamageOvertime();
-                heroes.get(j).Damage_Overtime();
+                heroes.get(j).damageOvertime();
             }
-//            for(int j = 0 ; j < heroes.size(); j++ ) {
-//                System.out.println(heroes.get(j).toString());
-//            }
             for (int j = 0; j < heroes.size(); j++) {
                 for (int k = j + 1; k < heroes.size(); k++) {
-                    if (heroes.get(j).getRow() == heroes.get(k).getRow() &&
-                            heroes.get(j).getCol() == heroes.get(k).getCol()) {
-//                        System.out.println("primul jucator este: " +heroes.get(j).getType());
+                    if (heroes.get(j).getRow() == heroes.get(k).getRow()
+                            && heroes.get(j).getCol() == heroes.get(k).getCol()) {
                         if (!heroes.get(j).isDeath() && !heroes.get(k).isDeath()) {
                             if (heroes.get(j).getType().equals("W")) {
                                 heroes.get(j).fight(heroes.get(k).getAbilities());
-                                heroes.get(j).getAbilities().get(1).setDamagereceived(heroes.get(j).getDamage_rec());
+                                heroes.get(j).getAbilities().get(1).
+                                        setDamagereceived(heroes.get(j).getDamageRec());
                                 heroes.get(k).fight(heroes.get(j).getAbilities());
                             } else {
-//                                System.out.println("intra aici");
                                 heroes.get(k).fight(heroes.get(j).getAbilities());
-//                                System.out.println("damage primit "+ heroes.get(k).getDamage_rec());
                                 if (heroes.get(k).getType().equals("W")) {
-                                    heroes.get(k).getAbilities().get(1).setDamagereceived(heroes.get(k).getDamage_rec());
+                                    heroes.get(k).getAbilities().get(1).
+                                            setDamagereceived(heroes.get(k).getDamageRec());
                                 }
                                 heroes.get(j).fight(heroes.get(k).getAbilities());
 
                             }
-//                        System.out.println(heroes.get(j).getHP_current());
-//                        System.out.println(heroes.get(k).getHP_current());
                             heroes.get(j).setHP();
                             heroes.get(k).setHP();
-//                        System.out.println(heroes.get(j).getHP());
-//                        System.out.println(heroes.get(k).getHP());
                             if (heroes.get(j).isDeath()) {
-                                heroes.get(k).setXP(heroes.get(j).getLevel());
+                                heroes.get(k).setXp(heroes.get(j).getLevel());
                             }
                             if (heroes.get(k).isDeath()) {
-                                heroes.get(j).setXP(heroes.get(k).getLevel());
+                                heroes.get(j).setXp(heroes.get(k).getLevel());
                             }
 
                         }
@@ -109,17 +91,12 @@ public class Game {
                     heroes.get(j).resetDamageRec();
                 }
             }
-//            for(Hero hero : heroes) {
-//                System.out.println(hero.toString());
-////                System.out.println(hero.isDeath());
-//            }
-//            System.out.println("--------ENDROUND-------");
         }
     }
 
-    public void printboard(String input, String output) {
+    public void printboard(final String input, final String output) {
         try {
-            fileio.FileSystem fs = new fileio.FileSystem(input, output);
+            FileSystem fs = new FileSystem(input, output);
             for (int i = 0; i < heroes.size(); i++) {
                 fs.writeWord(heroes.get(i).toString());
                 fs.writeNewLine();

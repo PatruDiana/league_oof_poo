@@ -6,26 +6,32 @@ import abilities.AbilitiesFactory;
 
 
 public class Rogue extends Hero {
-    Rogue(int row, int col) {
+    Rogue(final int row, final int col) {
         this.row = row;
         this.col = col;
-        this.HP = Constants.Hp_Roque;
+        this.hp = Constants.HP_ROQUE;
         this.type = "R";
         this.abilities = AbilitiesFactory.getAbilities(type);
         this.freeze = false;
         this.death = false;
-        this.HP_current = Constants.Hp_Roque;
-        this.HP_max = Constants.Hp_Roque;
+        this.hpCurrent = Constants.HP_ROQUE;
+        this.hpmax = Constants.HP_ROQUE;
     }
 
-
-    @Override
-    public void accept(Visitor v) {
+    /**
+     *
+     * @param v
+     */
+    public void accept(final Visitor v) {
         v.visit(this);
     }
+
+    /**
+     *
+     */
     public void setHPmax() {
-        HP_max += common.Constants.Extra_Hp_Rogue;
-        HP = HP_max;
-        HP_current = HP_max;
+        hpmax += common.Constants.EXTRA_HP_ROGUE;
+        hp = hpmax;
+        hpCurrent = hpmax;
     }
 }

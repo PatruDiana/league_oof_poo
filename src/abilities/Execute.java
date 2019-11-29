@@ -8,107 +8,114 @@ import heroes.Wizard;
 
 public class Execute extends  Abilities implements Visitor {
     public Execute() {
-        damage = Constants.Damage_Execute;
-        damageprocent = Constants.Hp_Limit;
+        damage = Constants.DAMAGE_EXECUTE;
+        damageprocent = Constants.HP_LIMIT;
     }
+
+    /**
+     *
+     */
     public void setDamage() {
-        damage += Constants.Extra_Damage_Execute;
-        if (damageprocent < Constants.Hp_Max_Limit) {
-            damageprocent += Constants.Extra_HP_Limit;
+        damage += Constants.EXTRA_DAMAGE_EXECUTE;
+        if (damageprocent < Constants.HP_MAX_LIMIT) {
+            damageprocent += Constants.EXTRA_HP_LIMIT;
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public int getDamage() {
         return damage;
     }
-    @Override
-    public void visit(Pyromancer p) {
-        float hp_limit = damageprocent * p.getHP_max();
-        int limit = Math.round(hp_limit);
-        if(p.getHP() < limit) {
-            p.setHP_current(p.getHP());
+
+    /**
+     *
+     * @param p
+     */
+    public void visit(final Pyromancer p) {
+        float hpLimit = damageprocent * p.getHpmax();
+        int limit = Math.round(hpLimit);
+        if (p.getHp() < limit) {
+            p.setHpCurrent(p.getHp());
         } else {
             float dmg = damage;
-            float land_bonus = land_modificator;
-            if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Land_type) {
-                land_bonus += Constants.Land_Bonus;
+            float landBonus = landModificator;
+            if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.LAND_TYPE) {
+                landBonus += Constants.LAND_BONUS;
             }
-            dmg = dmg * land_bonus;
-            dmg += dmg * Constants.Pyromancer_Modificator_E;
+            dmg = dmg * landBonus;
+            dmg += dmg * Constants.PYROMANCER_MODIFICATOR_E;
             int result = Math.round(dmg);
-//            System.out.println("Execute: " + result);
-            p.setHP_current(result);
+            p.setHpCurrent(result);
         }
     }
 
-    @Override
-    public void visit(Knight k) {
-        float hp_limit = damageprocent * k.getHP_max();
-        int limit = Math.round(hp_limit);
-        if(k.getHP() < limit) {
-            k.setHP_current(k.getHP());
+    /**
+     *
+     * @param k
+     */
+    public void visit(final Knight k) {
+        float hpLimit = damageprocent * k.getHpmax();
+        int limit = Math.round(hpLimit);
+        if (k.getHp() < limit) {
+            k.setHpCurrent(k.getHp());
         } else {
             float dmg = damage;
-            float land_bonus = land_modificator;
-            if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Land_type) {
-                land_bonus += Constants.Land_Bonus;
+            float landBonus = landModificator;
+            if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.LAND_TYPE) {
+                landBonus += Constants.LAND_BONUS;
             }
-            dmg = dmg * land_bonus;
-            dmg += dmg * Constants.Knight_Modificator_E;
+            dmg = dmg * landBonus;
+            dmg += dmg * Constants.KNIGHT_MODIFICATOR_E;
             int result = Math.round(dmg);
-//            System.out.println(result);
-            k.setHP_current(result);
+            k.setHpCurrent(result);
         }
     }
 
-    @Override
-    public void visit(Rogue r) {
-        float hp_limit = damageprocent * r.getHP_max();
-        int limit = Math.round(hp_limit);
-//        System.out.println(limit);
-        if(r.getHP() < limit) {
-            r.setHP_current(r.getHP());
+    /**
+     *
+     * @param r
+     */
+    public void visit(final Rogue r) {
+        float hpLimit = damageprocent * r.getHpmax();
+        int limit = Math.round(hpLimit);
+        if (r.getHp() < limit) {
+            r.setHpCurrent(r.getHp());
         } else {
-//            System.out.println("nu e ");
             float dmg = damage;
-            float land_bonus = land_modificator;
-            if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Land_type) {
-                land_bonus += Constants.Land_Bonus;
+            float landBonus = landModificator;
+            if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.LAND_TYPE) {
+                landBonus += Constants.LAND_BONUS;
             }
-            dmg = dmg * land_bonus;
-            dmg += dmg * Constants.Rogue_Modificator_E;
+            dmg = dmg * landBonus;
+            dmg += dmg * Constants.ROGUE_MODIFICATOR_E;
             int result = Math.round(dmg);
-//            System.out.println(result);
-            r.setHP_current(result);
+            r.setHpCurrent(result);
         }
     }
 
-    @Override
-    public void visit(Wizard w) {
-        float hp_limit = damageprocent * w.getHP_max();
-        int limit = Math.round(hp_limit);
-        if(w.getHP() < limit) {
-            w.setHP_current(w.getHP());
+    /**
+     *
+     * @param w
+     */
+    public void visit(final Wizard w) {
+        float hpLimit = damageprocent * w.getHpmax();
+        int limit = Math.round(hpLimit);
+        if (w.getHp() < limit) {
+            w.setHpCurrent(w.getHp());
         } else {
             float dmg = damage;
-            float land_bonus = land_modificator;
-            if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Land_type) {
-                land_bonus += Constants.Land_Bonus;
+            float landBonus = landModificator;
+            if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.LAND_TYPE) {
+                landBonus += Constants.LAND_BONUS;
             }
-            dmg = dmg * land_bonus;
-//            System.out.println("rec " + dmg);
-            w.setDamage_rec(dmg);
-            dmg -= dmg * Constants.Wizard_Modificator_E;
+            dmg = dmg * landBonus;
+            w.setDamageRec(dmg);
+            dmg -= dmg * Constants.WIZARD_MODIFICATOR_E;
             int result = Math.round(dmg);
-//            System.out.println(result);
-            w.setHP_current(result);
+            w.setHpCurrent(result);
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Execute{" +
-                "damage=" + damage +
-                '}';
     }
 }

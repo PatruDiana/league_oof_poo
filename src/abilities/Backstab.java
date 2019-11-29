@@ -7,110 +7,118 @@ import heroes.Rogue;
 import heroes.Wizard;
 
 public class Backstab extends Abilities implements Visitor {
-    private int nr_rounds;
-    private float woods_modificator;
+    private int nrRounds;
+    private float woodsModificator;
     Backstab() {
-        damage = Constants.Damage_Backstab;
-        nr_rounds = 0;
-        woods_modificator = 1;
+        damage = Constants.DAMAGE_BACKSTAB;
+        nrRounds = 0;
+        woodsModificator = 1;
     }
 
+    /**
+     *
+     */
     public void setDamage() {
-        damage += Constants.Extra_Damage_Backstab;
+        damage += Constants.EXTRA_DAMAGE_BACKSTAB;
     }
 
-    @Override
-    public void visit(Pyromancer p) {
-        float woods = woods_modificator;
+    /**
+     *
+     * @param p
+     */
+    public void visit(final Pyromancer p) {
+        float woods = woodsModificator;
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if((nr_rounds % Constants.Nr_Rounds_Backstab) == 0) {
-            if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Woods_type) {
-                woods += Constants.Hit_Woods;
+        float landBonus = landModificator;
+        if ((nrRounds % Constants.NR_ROUNDS_BACKSTAB) == 0) {
+            if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.WOODS_TYPE) {
+                woods += Constants.HIT_WOODS;
             }
         }
-        nr_rounds++;
-        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_Bonus;
+        nrRounds++;
+        if (map.Map.getInstance().getlocation(p.getRow(), p.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += Constants.WOODS_BONUS;
         }
-        dmg = dmg * land_bonus;
-        dmg += Constants.Pyromancer_Modificator_B*dmg;
+        dmg = dmg * landBonus;
+        dmg += Constants.PYROMANCER_MODIFICATOR_B *  dmg;
         dmg = woods * dmg;
         int result = Math.round(dmg);
-//        System.out.println("BACKSTAB" + result);
-        p.setHP_current(result);
+        p.setHpCurrent(result);
     }
 
-    @Override
-    public void visit(Knight k) {
-        float woods = woods_modificator;
+    /**
+     *
+     * @param k
+     */
+    public void visit(final Knight k) {
+        float woods = woodsModificator;
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if((nr_rounds % Constants.Nr_Rounds_Backstab) == 0) {
-            if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type) {
-                woods += Constants.Hit_Woods;
+        float landBonus = landModificator;
+        if ((nrRounds % Constants.NR_ROUNDS_BACKSTAB) == 0) {
+            if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.WOODS_TYPE) {
+                woods += Constants.HIT_WOODS;
             }
         }
-        nr_rounds++;
-       // System.out.println("aici" + nr_rounds);
-        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_Bonus;
+        nrRounds++;
+        if (map.Map.getInstance().getlocation(k.getRow(), k.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += Constants.WOODS_BONUS;
         }
-//        System.out.println("land" + land_bonus);
-        dmg = dmg * land_bonus;
-        dmg -= Constants.Knight_Modificator_B*dmg;
+        dmg = dmg * landBonus;
+        dmg -= Constants.KNIGHT_MODIFICATOR_B * dmg;
         dmg = woods * dmg;
         int result = Math.round(dmg);
-//        System.out.println(result);
-        k.setHP_current(result);
-
-    }
-
-    @Override
-    public void visit(Rogue r) {
-        float woods = woods_modificator;
-        float dmg = damage;
-        float land_bonus = land_modificator;
-        if((nr_rounds % Constants.Nr_Rounds_Backstab) == 0) {
-            if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Woods_type) {
-                woods += Constants.Hit_Woods;
-            }
-        }
-        nr_rounds++;
-        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_Bonus;
-        }
-        dmg = dmg * land_bonus;
-        dmg += Constants.Roque_Modificator_B*dmg;
-        dmg = woods * dmg;
-        int result = Math.round(dmg);
-//        System.out.println(result);
-        r.setHP_current(result);
+        k.setHpCurrent(result);
 
     }
 
-    @Override
-    public void visit(Wizard w) {
-        float woods = woods_modificator;
+    /**
+     *
+     * @param r
+     */
+    public void visit(final Rogue r) {
+        float woods = woodsModificator;
         float dmg = damage;
-        float land_bonus = land_modificator;
-        if((nr_rounds % Constants.Nr_Rounds_Backstab) == 0) {
-            if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Woods_type) {
-                woods += Constants.Hit_Woods;
+        float landBonus = landModificator;
+        if ((nrRounds % Constants.NR_ROUNDS_BACKSTAB) == 0) {
+            if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.WOODS_TYPE) {
+                woods += Constants.HIT_WOODS;
             }
         }
-        nr_rounds++;
-        if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.Woods_type) {
-            land_bonus += Constants.Woods_Bonus;
+        nrRounds++;
+        if (map.Map.getInstance().getlocation(r.getRow(), r.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += Constants.WOODS_BONUS;
         }
-        dmg = dmg * land_bonus;
+        dmg = dmg * landBonus;
+        dmg += Constants.ROGUE_MODIFICATOR_B * dmg;
         dmg = woods * dmg;
-//        System.out.println("b fara race: "+ dmg);
-        w.setDamage_rec(dmg);
-        dmg += Constants.Wizard_Modificator_B*dmg;
         int result = Math.round(dmg);
-//        System.out.println("Backstab: "+result);
-        w.setHP_current(result);
+        r.setHpCurrent(result);
+
+    }
+
+    /**
+     *
+     * @param w
+     */
+    public void visit(final Wizard w) {
+        float woods = woodsModificator;
+        float dmg = damage;
+        float landBonus = landModificator;
+        if ((nrRounds % Constants.NR_ROUNDS_BACKSTAB) == 0) {
+            if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.WOODS_TYPE) {
+                woods += Constants.HIT_WOODS;
+            }
+        }
+        nrRounds++;
+        if (map.Map.getInstance().getlocation(w.getRow(), w.getCol()) == Constants.WOODS_TYPE) {
+            landBonus += Constants.WOODS_BONUS;
+        }
+        dmg = dmg * landBonus;
+        dmg = woods * dmg;
+        w.setDamageRec(dmg);
+        dmg += Constants.WIZARD_MODIFICATOR_B * dmg;
+        int result = Math.round(dmg);
+        w.setHpCurrent(result);
 
     }
 }

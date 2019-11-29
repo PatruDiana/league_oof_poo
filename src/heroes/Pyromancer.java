@@ -5,27 +5,32 @@ import common.Constants;
 import abilities.AbilitiesFactory;
 
 public class Pyromancer extends Hero {
-    Pyromancer(int row, int col) {
+    Pyromancer(final int row, final int col) {
         this.row = row;
         this.col = col;
-        this.HP = Constants.Hp_Pyromancer;
+        this.hp = Constants.HP_PYROMANCER;
         this.type = "P";
         this.abilities = AbilitiesFactory.getAbilities(type);
         this.freeze = false;
         this.death = false;
-        this.HP_current = Constants.Hp_Pyromancer;
-        this.HP_max = Constants.Hp_Pyromancer;
+        this.hpCurrent = Constants.HP_PYROMANCER;
+        this.hpmax = Constants.HP_PYROMANCER;
     }
 
-
-
-    @Override
-    public void accept(Visitor v) {
+    /**
+     *
+     * @param v
+     */
+    public void accept(final Visitor v) {
             v.visit(this);
     }
+
+    /**
+     *
+     */
     public void setHPmax() {
-        HP_max += common.Constants.Extra_Hp_Pyromancer;
-        HP = HP_max;
-        HP_current = HP_max;
+        hpmax += common.Constants.EXTRA_HP_PYROMANCER;
+        hp = hpmax;
+        hpCurrent = hpmax;
     }
 }

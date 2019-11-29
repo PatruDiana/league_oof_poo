@@ -1,7 +1,6 @@
 package map;
 
 import common.Constants;
-import java.lang.*;
 public class Map {
     private static Map instance = null;
     private int[][] map;
@@ -9,12 +8,12 @@ public class Map {
     private int col;
 
 
-    Map (int row, int column) {
+    Map(final int row, final int column) {
         this.map = new int[row][column];
         this.row = row;
         this.col = column;
     }
-    public static Map getInstance(int row, int column) {
+    public static Map getInstance(final int row, final int column) {
         instance = new Map(row, column);
         return instance;
     }
@@ -22,38 +21,42 @@ public class Map {
         return instance;
     }
 
+    /**
+     *
+     * @return
+     */
     public int[][] getMap() {
         return map;
     }
-    public void setLocation(String location, int curr_row) {
+
+    /**
+     *
+     * @param location
+     * @param currRow
+     */
+    public void setLocation(final String location, final int currRow) {
         char[] lArray = location.toCharArray();
-//        System.out.println(lArray.length);
-//        System.out.println(lArray[0]);
-        int curr_col = 0;
-        for(char c : lArray){
-         //   System.out.println(c);
+        int currCol = 0;
+        for (char c : lArray) {
             if (c == 'L') {
-                this.map[curr_row][curr_col++] = Constants.Land_type;
+                this.map[currRow][currCol++] = Constants.LAND_TYPE;
             } else if (c == 'V') {
-                this.map[curr_row][curr_col++] = Constants.Volcanic_type;
+                this.map[currRow][currCol++] = Constants.VOLCANIC_TYPE;
             } else if (c == 'D') {
-                this.map[curr_row][curr_col++] = Constants.Desert_type;
+                this.map[currRow][currCol++] = Constants.DESERT_TYPE;
             } else {
-                this.map[curr_row][curr_col++] = Constants.Woods_type;
+                this.map[currRow][currCol++] = Constants.WOODS_TYPE;
             }
 
         }
     }
-
-    public void display() {
-        for (int i = 0; i < row; i++) {
-            for (int j = 0 ;j < col; j++) {
-                System.out.print(map[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-    public int getlocation(int i, int j) {
+    /**
+     *
+     * @param i
+     * @param j
+     * @return
+     */
+    public int getlocation(final int i, final int j) {
         return map[i][j];
     }
 }

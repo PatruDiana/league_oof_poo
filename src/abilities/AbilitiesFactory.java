@@ -2,8 +2,11 @@ package abilities;
 
 import java.util.ArrayList;
 
-public class AbilitiesFactory {
-    public static ArrayList<Abilities> getAbilities(String type) {
+public final class AbilitiesFactory {
+    private AbilitiesFactory() {
+        //for checkstyle
+    }
+    public static ArrayList<Abilities> getAbilities(final String type) {
         ArrayList<Abilities> newAbilities = new ArrayList<>(2);
         if ("P".equalsIgnoreCase(type)) {
             Abilities ability1 = new Fireblast();
