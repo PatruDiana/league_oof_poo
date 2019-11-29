@@ -3,240 +3,74 @@
   <component name="ChangeListManager">
     <list default="true" id="21a77ae7-144e-437a-9910-9eb67bcee100" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileIO.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/checkstyle/checkstyle-7.3-all.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/checkstyle/poo_checks.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/3x3.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/4x4.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/5x5.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/dense.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightKWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightPWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightRWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/in/fightWWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/3x3.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/4x4.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/5x5.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/dense.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightKWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightPWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightRWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker/checker/resources/res/fightWWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/common/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/abilities/Drain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/abilities/Drain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/abilities/Execute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/abilities/Execute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/3x3.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/3x3.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/4x4.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/4x4.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/5x5.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/5x5.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/dense.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/dense.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKKW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKPW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKRW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightKWW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPKW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPPW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPRW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightPWW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRKW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRPW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRW.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRRW.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRWD.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRWD.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRWL.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRWL.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRWV.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checker/resources/out/fightRWV.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/checkstyle.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tema2poo/heroes/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/heroes/Hero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/heroes/Knight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/heroes/Knight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/heroes/Pyromancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/heroes/Pyromancer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/heroes/Rogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/heroes/Rogue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/heroes/Wizard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/heroes/Wizard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tema2poo/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/main/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/main/GameInputLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/main/GameInputLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tema2poo/map/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tema2poo/map/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abilities/Abilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Abilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abilities/Backstab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Backstab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abilities/Deflect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Deflect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abilities/Drain.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Drain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/abilities/Drain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Drain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abilities/Execute.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Execute.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/abilities/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Execute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abilities/Paralysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Paralysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abilities/Slam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abilities/Slam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/3x3.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/3x3.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checker/resources/out/4x4.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/4x4.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/5x5.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/5x5.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checker/resources/out/dense.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/dense.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKKD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKKD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKKL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKKL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKKV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKKV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKKW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKKW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKPD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKPD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKPL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKPL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKPV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKPV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKPW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKPW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKRD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKRD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKRL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKRL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKRV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKRV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKRW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKRW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKWD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKWD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKWL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKWL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKWV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKWV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightKWW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightKWW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPKD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPKD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPKL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPKL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPKV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPKV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPKW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPKW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPPD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPPD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPPL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPPL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPPV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPPV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPPW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPPW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPRD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPRD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPRL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPRL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPRV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPRV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPRW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPRW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPWD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPWD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPWL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPWL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPWV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPWV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightPWW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightPWW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRKD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRKD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRKL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRKL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRKV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRKV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRKW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRKW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRPD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRPD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRPL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRPL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRPV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRPV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRPW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRPW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRRD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRRD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRRL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRRL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRRV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRRV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRRW.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRRW.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRWD.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRWD.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRWL.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRWL.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRWV.out" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/resources/out/fightRWV.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightRWW.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWKD.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWKL.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWKV.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWKW.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWPD.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWPL.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWPV.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWPW.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWRD.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWRL.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWRV.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWRW.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWWD.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWWL.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWWV.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/resources/out/fightWWW.out" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkstyle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/heroes/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/heroes/Hero.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/heroes/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/heroes/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/heroes/Knight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/heroes/Pyromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/heroes/Pyromancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/heroes/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/heroes/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/heroes/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tema2poo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tema2poo.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,30 +166,30 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="590" y="215" width="800" height="684" key="#Project_Structure/70.27.1850.1053@70.27.1850.1053" timestamp="1574799613346" />
-    <state x="803" y="266" width="554" height="603" key="#com.intellij.ide.util.MemberChooser" timestamp="1575021232337">
+    <state x="803" y="266" width="554" height="603" key="#com.intellij.ide.util.MemberChooser" timestamp="1575022096495">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="803" y="266" width="554" height="603" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1575021232337" />
+    <state x="803" y="266" width="554" height="603" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1575022096495" />
     <state x="773" y="315" width="424" height="491" key="FileChooserDialogImpl" timestamp="1574891789078">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="773" y="315" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1574891789078" />
-    <state width="1804" height="286" key="GridCell.Tab.0.bottom" timestamp="1575021767833">
+    <state width="1804" height="286" key="GridCell.Tab.0.bottom" timestamp="1575022821462">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="286" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575021767833" />
-    <state width="1804" height="286" key="GridCell.Tab.0.center" timestamp="1575021767833">
+    <state width="1804" height="286" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575022821462" />
+    <state width="1804" height="286" key="GridCell.Tab.0.center" timestamp="1575022821462">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="286" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575021767833" />
-    <state width="1804" height="286" key="GridCell.Tab.0.left" timestamp="1575021767833">
+    <state width="1804" height="286" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575022821462" />
+    <state width="1804" height="286" key="GridCell.Tab.0.left" timestamp="1575022821462">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="286" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575021767833" />
-    <state width="1804" height="286" key="GridCell.Tab.0.right" timestamp="1575021767833">
+    <state width="1804" height="286" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575022821462" />
+    <state width="1804" height="286" key="GridCell.Tab.0.right" timestamp="1575022821462">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="286" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575021767833" />
+    <state width="1804" height="286" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575022821462" />
     <state x="478" y="131" width="1024" height="852" key="SettingsEditor" timestamp="1574891791793">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

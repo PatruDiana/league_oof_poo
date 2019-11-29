@@ -23,7 +23,7 @@ public class Execute extends  Abilities implements Visitor {
     }
     @Override
     public void visit(Pyromancer p) {
-        float hp_limit = damageprocent * Constants.Hp_Pyromancer;
+        float hp_limit = damageprocent * p.getHP_max();
         int limit = Math.round(hp_limit);
         if(p.getHP() < limit) {
             p.setHP_current(p.getHP());
@@ -43,7 +43,7 @@ public class Execute extends  Abilities implements Visitor {
 
     @Override
     public void visit(Knight k) {
-        float hp_limit = damageprocent * Constants.Hp_Knight;
+        float hp_limit = damageprocent * k.getHP_max();
         int limit = Math.round(hp_limit);
         if(k.getHP() < limit) {
             k.setHP_current(k.getHP());
@@ -63,7 +63,7 @@ public class Execute extends  Abilities implements Visitor {
 
     @Override
     public void visit(Rogue r) {
-        float hp_limit = damageprocent * Constants.Hp_Roque;
+        float hp_limit = damageprocent * r.getHP_max();
         int limit = Math.round(hp_limit);
 //        System.out.println(limit);
         if(r.getHP() < limit) {
@@ -85,7 +85,7 @@ public class Execute extends  Abilities implements Visitor {
 
     @Override
     public void visit(Wizard w) {
-        float hp_limit = damageprocent * Constants.Hp_Wizard;
+        float hp_limit = damageprocent * w.getHP_max();
         int limit = Math.round(hp_limit);
         if(w.getHP() < limit) {
             w.setHP_current(w.getHP());

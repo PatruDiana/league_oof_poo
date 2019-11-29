@@ -49,6 +49,7 @@ public class Game {
 //            System.out.println(heroes.get(i).getType());
 //        }
         for (int i = 0; i < rounds; i++) {
+//            System.out.println("Round " + i);
             for (int j = 0; j < heroes.size(); j++) {
                 Character move = arraymoves.get(0);
 //                System.out.println(move);
@@ -108,11 +109,11 @@ public class Game {
                     heroes.get(j).resetDamageRec();
                 }
             }
-//            System.out.println();
 //            for(Hero hero : heroes) {
 //                System.out.println(hero.toString());
 ////                System.out.println(hero.isDeath());
 //            }
+//            System.out.println("--------ENDROUND-------");
         }
     }
 

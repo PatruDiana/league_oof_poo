@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 //        String input = "/home/diana/Desktop/league_of_oop/checker/checker/resources/in/fightKKD.in";
 //        String input = "/home/diana/Desktop/league_of_oop/checker/checker/resources/in/fightKPD.in";
-//        String input = "/home/diana/Desktop/league_of_oop/checker/checker/resources/in/3x3.in";
+//        String input = "/home/diana/Desktop/league_of_oop/checker/checker/resources/in/4x4.in";
 //        String output="/home/diana/Desktop/output.out";
 //        GameInputLoader gameInputLoader = new GameInputLoader(input, output);
         GameInputLoader gameInputLoader = new GameInputLoader(args[0], args[1]);

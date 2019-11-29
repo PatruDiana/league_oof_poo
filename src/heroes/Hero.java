@@ -20,15 +20,17 @@ public abstract class Hero implements Visitable {
     protected boolean death;
     protected int HP_current;
     public void setMove(Character move) {
-        if (move != '_') {
-            if (move == 'U') {
-                this.row--;
-            } else if (move == 'D') {
-                this.row++;
-            } else if (move == 'L') {
-                this.col--;
-            } else {
-                this.col++;
+        if(!freeze) {
+            if (move != '_') {
+                if (move == 'U') {
+                    this.row--;
+                } else if (move == 'D') {
+                    this.row++;
+                } else if (move == 'L') {
+                    this.col--;
+                } else {
+                    this.col++;
+                }
             }
         }
     }
@@ -56,6 +58,9 @@ public abstract class Hero implements Visitable {
             HP -= damage_overtime;
             HP_current = HP;
             nr_round_overtime--;
+            if(nr_round_overtime == 0 && freeze) {
+                freeze = false;
+            }
             if(HP <= 0) {
                 setDeath();
             }
@@ -134,4 +139,7 @@ public abstract class Hero implements Visitable {
 
     }
 
+    public int getHP_max() {
+        return HP_max;
+    }
 }
