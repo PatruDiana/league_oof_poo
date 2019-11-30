@@ -8,7 +8,7 @@ public final class Main {
         GameInputLoader gameInputLoader = new GameInputLoader(args[0], args[1]);
          gameInputLoader.load();
          Game game = Game.getInstance();
-         game.createheros();
+         game.createheroes();
          game.startgame();
          game.printboard(args[0], args[1]);
     }

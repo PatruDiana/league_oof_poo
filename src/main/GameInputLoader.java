@@ -14,7 +14,7 @@ public class GameInputLoader {
     }
 
     /**
-     *
+     * reading input data and organizing them.
      */
     public void load() {
         int nrRows = 0, nrCols = 0, nrHeroes = 0, nrRounds = 0;

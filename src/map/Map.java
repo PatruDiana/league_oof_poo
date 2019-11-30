@@ -22,17 +22,15 @@ public class Map {
     }
 
     /**
-     *
-     * @return
+     * @return  - the map
      */
     public int[][] getMap() {
         return map;
     }
 
     /**
-     *
-     * @param location
-     * @param currRow
+     * @param location - the types of land on the current line of the map.
+     * @param currRow - the current row.
      */
     public void setLocation(final String location, final int currRow) {
         char[] lArray = location.toCharArray();
@@ -51,10 +49,9 @@ public class Map {
         }
     }
     /**
-     *
-     * @param i
-     * @param j
-     * @return
+     * @param i - the current row
+     * @param j - the current column
+     * @return - the type of land.
      */
     public int getlocation(final int i, final int j) {
         return map[i][j];
