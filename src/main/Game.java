@@ -113,9 +113,9 @@ public final class Game {
     }
 
     /**
-     * print the final broad game
+     * print the final broad game.
      * @param input - file input
-     * @param output - file output 
+     * @param output - file output
      */
     public void printboard(final String input, final String output) {
         try {

@@ -15,7 +15,7 @@ public abstract class Abilities implements Visitor {
 
     /**
      * set the damage received by the Wizard for Deflect ability.
-     * The method will be overwritten bt the Deflect ability.
+     * The method will be overwritten by the Deflect ability.
      * @param damagereceived- damage received by the Wizard.
      */
     public void setDamagereceived(final int damagereceived) { }

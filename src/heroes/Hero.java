@@ -132,7 +132,7 @@ public abstract class Hero implements Visitable {
     }
 
     /**
-     * applying the list of abilities to a hero
+     * applying the list of abilities to a hero.
      * @param a - list of abilities
      */
     public void fight(final ArrayList<Abilities> a) {
@@ -149,7 +149,7 @@ public abstract class Hero implements Visitable {
     }
 
     /**
-     * check if the hero is alive
+     * check if the hero is alive.
      * @return
      */
     public boolean isDeath() {
