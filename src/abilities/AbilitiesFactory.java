@@ -8,6 +8,7 @@ public final class AbilitiesFactory {
     }
     public static ArrayList<Abilities> getAbilities(final String type) {
         ArrayList<Abilities> newAbilities = new ArrayList<>(2);
+        // check the hero type to assign each one the appropriate abilities
         if ("P".equalsIgnoreCase(type)) {
             Abilities ability1 = new Fireblast();
             newAbilities.add(ability1);
