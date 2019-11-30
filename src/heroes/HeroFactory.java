@@ -5,6 +5,7 @@ public final class HeroFactory {
         //for checkstyle
     }
     public static Hero getHero(final String type, final int row, final int col) {
+        // // check the hero type to create them with the initial position
         if ("P".equalsIgnoreCase(type)) {
             return new Pyromancer(row, col);
         } else if ("K".equalsIgnoreCase(type)) {

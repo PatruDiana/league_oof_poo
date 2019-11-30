@@ -46,7 +46,7 @@ public final class Constants {
     public static final float KNIGHT_MODIFICATOR_E = 0f;
     public static final float PYROMANCER_MODIFICATOR_E = 0.1f;
     public static final float WIZARD_MODIFICATOR_E = 0.2f;
-    //Slam
+    // Slam
     public static final int DAMAGE_SLAM = 100;
     public static final int EXTRA_DAMAGE_SLAM = 40;
     public static final int NR_ROUNDS_OVERTIME_S = 1;
@@ -93,7 +93,7 @@ public final class Constants {
     public static final float KNIGHT_MODIFICATOR_P = 0.2f;
     public static final float ROGUE_MODIFICATOR_P = 0.1f;
     public static final float WIZARD_MODIFICATOR_P = 0.25f;
-    //
+    // XP update
     public static final int MAX_XP = 200;
     public static final int MULTIPLIER_XP = 40;
     public static final int XP_MIN_LEVEL = 250;

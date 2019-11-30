@@ -19,7 +19,7 @@ public class Rogue extends Hero {
     }
 
     /**
-     *
+     * requires the visitor to visit the current hero.
      * @param v
      */
     public void accept(final Visitor v) {
@@ -27,7 +27,7 @@ public class Rogue extends Hero {
     }
 
     /**
-     *
+     * set the maximum hp with the level update.
      */
     public void setHPmax() {
         hpmax += common.Constants.EXTRA_HP_ROGUE;
